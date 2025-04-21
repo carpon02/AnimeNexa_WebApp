@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@project-serum/anchor": "^0.26.0",
     "axios": "^1.8.4",
     "dotenv": "^16.5.0",
     "framer-motion": "^12.7.4",
