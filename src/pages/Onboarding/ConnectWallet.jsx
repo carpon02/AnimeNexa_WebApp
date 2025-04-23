@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { assets } from '../../assets/assets';
 
 const ConnectWallet = () => {
   const [selectedWallet, setSelectedWallet] = useState('Backpack');
   const navigate = useNavigate();
 
   const wallets = [
-    { id: 'solflare', name: 'Solflare' },
-    { id: 'backpack', name: 'Backpack' },
-    { id: 'phantom', name: 'Phantom' }
+    { id: 'solflare', name: 'Solflare',   },
+    { id: 'backpack', name: 'Backpack',  },
+    { id: 'phantom', name: 'Phantom',  },
   ];
 
   const handleWalletSelect = (walletId) => {
@@ -23,10 +24,13 @@ const ConnectWallet = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col justify-between py-12 px-4 sm:px-6 lg:px-8">
-      <div className="sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-center text-indigo-600 mb-2">
+    <div className="min-h-screen  flex flex-col justify-start py-5 px-4 sm:px-6 lg:px-8">
+      <div className="flex mb-5 ml-4">
+        <img src={assets.logo} className='drop-shadow'  alt="" />
+      </div>
+      <div className="sm:mx-auto sm:w-full sm:max-w-md ">
+        <div className="text-start ml-6">
+          <h1 className="text-3xl font-bold text- text-black ">
             Connect to a wallet
           </h1>
           <p className="mt-2 text-gray-600">
@@ -34,7 +38,7 @@ const ConnectWallet = () => {
           </p>
         </div>
 
-        <div className="mt-8 bg-white py-6 px-6 shadow rounded-lg sm:px-10">
+        <div className="mt-8 bg-white py-6 px-6  rounded-lg sm:px-10">
           <div className="space-y-4">
             {wallets.map((wallet) => (
               <div
@@ -42,7 +46,7 @@ const ConnectWallet = () => {
                 onClick={() => handleWalletSelect(wallet.id)}
                 className={`flex items-center p-4 border rounded-lg cursor-pointer transition-colors ${
                   selectedWallet === wallet.id
-                    ? 'border-indigo-500 bg-indigo-50'
+                    ? 'border-secondary bg-secondary'
                     : 'border-gray-300 hover:bg-gray-50'
                 }`}
               >
@@ -62,10 +66,14 @@ const ConnectWallet = () => {
 
           <button
             onClick={handleContinue}
-            className="w-full mt-8 flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="w-full mt-20 mb-4 flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm font-medium text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
           >
             Next
-          </button>
+          </button> 
+          
+          <button className="w-full border border-gray-300 text-black py-3 rounded-md font-medium" onClick={() => navigate('/onboarding/profile')}>
+            Skip for now
+        </button>
         </div>
       </div>
     </div>

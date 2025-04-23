@@ -20,7 +20,7 @@ const Welcome = () => {
         Discover Anime, Connect with Fans, and Earn Rewards for Your Passion
       </p>
       <div className="w-full mt-8 space-y-5 flex flex-col sm:w-full">
-        <button className="w-full bg-purple-600 text-white py-3 rounded-md font-medium cursor-pointer" onClick={() => navigate('/onboarding/sign-in')}>
+        <button className="w-full bg-purple-600 text-white py-3 rounded-md font-medium cursor-pointer" onClick={() => navigate('/onboarding/create-account')}>
           Sign in
         </button>
         <button className="w-full border border-gray-300 text-black py-3 rounded-md font-medium" onClick={() => navigate('/onboarding/create-account')}>

@@ -26,13 +26,12 @@ body {
     .drop-shadow{
         filter: drop-shadow(-6px 8px 15px rgba(0,0,0,0.4));
     }
-
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    
 }
-
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }

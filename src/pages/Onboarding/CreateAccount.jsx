@@ -102,7 +102,7 @@ const CreateAccount = () => {
                   <div className="pt-4">
                     <button
                       type="submit"
-                      className="w-full flex justify-center py-4 borderpy-2 rounded-md transition-all duration-300 text-base border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                      className="w-full flex justify-center py-4 borderpy-2  transition-all duration-300 text-base border-transparent rounded-md shadow-sm  font-medium text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                       onClick={handleSubmit}
                     >
                       Create Account
@@ -112,7 +112,7 @@ const CreateAccount = () => {
                   <div className="pt-4">
                   <button
                     type="submit"
-                    className="w-full flex justify-center py-4 border border-transparent transition-all duration-300 rounded-md shadow-sm text-sm font-medium py-2 rounded-md text-base text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                    className="w-full flex justify-center  border border-transparent transition-all duration-300  shadow-sm  font-medium py-2 rounded-md text-base text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                     onClick={handleSubmit}
                   >
                     Login
@@ -137,7 +137,7 @@ const CreateAccount = () => {
                 <div className="relative flex justify-center text-sm">
                   Already have an account?{" "}
                   <span
-                    className="px-2 bg-white text-gray-500 cursor-pointer"
+                    className="px-2 bg-white text-purple-500 cursor-pointer"
                     onClick={() => setState("login")}
                   >
                     Sign in
@@ -147,7 +147,7 @@ const CreateAccount = () => {
                 <div className='relative flex justify-center text-sm'>
                   Don't have an account?{" "}
                   <span
-                    className="px-2 bg-white text-gray-500 cursor-pointer"
+                    className="px-2 bg-white text-purple-500 cursor-pointer"
                     onClick={() => setState("sign-up")}
                   >
                     Sign up

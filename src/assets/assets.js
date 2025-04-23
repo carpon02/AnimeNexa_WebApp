@@ -27,9 +27,19 @@ import search from '../assets/search.png'
 import filter_list from '../assets/filter_list.png'
 import back from '../assets/back.png'
 import verified from '../assets/verified.png'
+import postImage from './postImage.png'
+import share from './share.png'
+import Gift from './Gift.png'
+import comment from './comment.png'
+import like from './like.png'
+import unlike from './unlike.png'
+import save from './save.png'
+
+
 
 export const assets = {
     logo,
+    postImage,
     nft1,
     nft2,
     nft3,
@@ -57,8 +67,29 @@ export const assets = {
     search,
     filter_list,
     back,
-    verified
+    verified,
+    save,
+    comment,
+    share,
+    like,
+    unlike,
+    Gift
 }
+
+
+export const stories = [
+  { id: 1, username: "User1", avatar: nft4},
+  { id: 2, username: "User2", avatar: nft9 },
+  { id: 3, username: "User3", avatar: nft4 },
+  { id: 4, username: "User4", avatar: nft5 },
+  { id: 5, username: "User5", avatar: nft6},
+  { id: 6, username: "User6", avatar: nft7},
+  { id: 7, username: "User7", avatar: nft8 },
+  { id: 8, username: "User8", avatar: nft9 },
+  { id: 9, username: "User9", avatar: nft13 },
+  { id: 10, username: "User10", avatar: nft11 },
+];
+
 
 export const users = [
     {
@@ -235,62 +266,37 @@ export const users = [
   ];
   
   
-  export const posts = [
-    {
-      id: "post1",
-      userId: "user1",
-      image: "/posts/post1.jpg",
-      caption: "Check out my latest NFT drop! 💎 #user1",
-      timestamp: "2025-04-16T10:00:00Z",
-      tips: [
-        { fromUser: "user2", amount: 0.01 },
-        { fromUser: "user3", amount: 0.05 },
-      ],
-    },
-    {
-      id: "post2",
-      userId: "user2",
-      image: "/posts/post2.jpg",
-      caption: "Writing smart contracts all day! 🔐 #user2",
-      timestamp: "2025-04-15T16:30:00Z",
-      tips: [],
-    },
-    {
-      id: "post3",
-      userId: "user3",
-      image: "/posts/post3.jpg",
-      caption: "Learning how to connect my wallet with React 😎 #user3",
-      timestamp: "2025-04-14T14:15:00Z",
-      tips: [{ fromUser: "user1", amount: 0.02 }],
-    },
-    {
-      id: "post4",
-      userId: "user4",
-      image: "/posts/post4.jpg",
-      caption: "Who else is hyped for the hackathon? 🔥 #user4",
-      timestamp: "2025-04-13T18:45:00Z",
-      tips: [
-        { fromUser: "user1", amount: 0.01 },
-        { fromUser: "user3", amount: 0.03 },
-      ],
-    },
-    {
-      id: "post5",
-      userId: "user5",
-      image: "/posts/post5.jpg",
-      caption: "Decentralized social media is the future 🚀 #user5",
-      timestamp: "2025-04-12T09:25:00Z",
-      tips: [],
-    },
-    {
-      id: "post6",
-      userId: "user2",
-      image: "/posts/post6.jpg",
-      caption: "Morning vibes with Web3 ☕ #user2",
-      timestamp: "2025-04-11T07:00:00Z",
-      tips: [{ fromUser: "user4", amount: 0.015 }],
-    },
-  ];
+ 
+export const posts = [
+  {
+    id: 1,
+    username: "Anime Lover",
+    handle: "@animelover",
+    time: "2h",
+    content: "Just finished watching the latest episode of Demon Slayer! The animation quality is absolutely stunning! #DemonSlayer #Anime",
+    image: postImage,
+    avatar: nft5,
+  },
+  {
+    id: 2,
+    username: "Otaku King",
+    handle: "@otakuking",
+    time: "4h",
+    content: "Attack on Titan’s final season is fire! #AOT #AnimeWorld",
+    image: postImage,
+    avatar: nft1,
+  },
+  {
+    id: 3,
+    username: "Manga Reader",
+    handle: "@mangafan",
+    time: "5h",
+    content: "Jujutsu Kaisen manga twist was insane. Can’t wait for the anime to catch up!",
+    image: postImage,
+    avatar: nft6,
+    
+  },
+];
 
   export const featuredCreators = [
     {

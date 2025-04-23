@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate, Navigate } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route,  Navigate } from "react-router-dom";
 
 // Import your original components with their original names
 import Onboarding from "./pages/Onboarding/Onboarding";
@@ -18,27 +18,7 @@ import Menu from "./pages/Menu";
 import CreatePost from "./pages/CreatePost";
 import CreateAccount from "./pages/Onboarding/CreateAccount";
 import SignIn from "./pages/Onboarding/SignIn";
-
-// Protected Route Component (unchanged from your original)
-const ProtectedRoute = ({ children }) => {
-  const navigate = useNavigate();
-  const [isOnboarded, setIsOnboarded] = useState(null);
-
-  useEffect(() => {
-    const onboarded = localStorage.getItem("isOnboarded") === "true";
-    setIsOnboarded(onboarded);
-  }, []);
-
-  if (isOnboarded === null) {
-    return <div className="min-h-screen bg-black text-white flex items-center justify-center">Loading...</div>;
-  }
-
-  if (!isOnboarded) {
-    return <Navigate to="/onboarding/welcome" replace />;
-  }
-
-  return children;
-};
+import ProtectedRoute from "./Components/ProtectedRoute";
 
 const App = () => {
   return (

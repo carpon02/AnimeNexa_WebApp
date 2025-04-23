@@ -42,11 +42,11 @@ const VerifyEmail = () => {
     console.log("Verification code:", verificationCode);
   };
 
-  const showBackButton = !window.location.pathname.endsWith('/onboarding/verify-email');
+  // const showBackButton = !window.location.pathname.endsWith('/onboarding/verify-email');
 
 
   return (
-    <div className="min-h-screen flex flex-col  justify-center px-6 bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen flex flex-col  justify-center px-6 bg-white py-12 sm:px-6 lg:px-8">
        
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <div className="flex justify-center items-center ">
@@ -84,7 +84,7 @@ const VerifyEmail = () => {
             <div>
               <button
                 type="submit"
-                className="w-full flex justify-center py-4 border border-transparent transition-all duration-300 rounded-md shadow-sm text-sm font-medium py-2 rounded-md text-base text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                className="w-full flex justify-center py-4 border border-transparent transition-all duration-300  shadow-sm - font-medium -2 rounded-md text-base text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
               >
                 Verify Email
               </button>
