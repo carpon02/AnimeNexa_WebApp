@@ -1,7 +1,6 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route,  Navigate } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 
-// Import your original components with their original names
 import Onboarding from "./pages/Onboarding/Onboarding";
 import WelcomePage from "./pages/Onboarding/WelcomePage";
 import VerifyEmail from "./pages/Onboarding/VerifyEmail";
@@ -18,14 +17,16 @@ import Menu from "./pages/Menu";
 import CreatePost from "./pages/CreatePost";
 import CreateAccount from "./pages/Onboarding/CreateAccount";
 import SignIn from "./pages/Onboarding/SignIn";
+
 import ProtectedRoute from "./Components/ProtectedRoute";
+import ProtectedLayout from "./Components/ProtectedLayout"; // << Import this!
 
 const App = () => {
   return (
     <Router>
-      <div className="min-h-screen  text-gray-800">
+      <div className="min-h-screen text-gray-800">
         <Routes>
-          {/* Root Route - unchanged */}
+          {/* Root Redirect */}
           <Route
             path="/"
             element={
@@ -35,7 +36,7 @@ const App = () => {
             }
           />
 
-          {/* Onboarding Routes - keeping your original structure */}
+          {/* Onboarding Routes */}
           <Route path="/onboarding" element={<Onboarding />}>
             <Route path="welcome" element={<WelcomePage />} />
             <Route path="create-account" element={<CreateAccount />} />
@@ -48,65 +49,26 @@ const App = () => {
             <Route index element={<Navigate to="welcome" replace />} />
           </Route>
 
-          {/* Main App Routes - unchanged */}
+          {/* Main Protected App Routes */}
           <Route
-            path="/news-feed"
+            path="/"
             element={
               <ProtectedRoute>
-                <NewsFeed />
+                <ProtectedLayout />
               </ProtectedRoute>
             }
-          />
-          <Route
-            path="/reels"
-            element={
-              <ProtectedRoute>
-                <Reels />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/notifications"
-            element={
-              <ProtectedRoute>
-                <Notifications />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/messages"
-            element={
-              <ProtectedRoute>
-                <Messages />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/clan"
-            element={
-              <ProtectedRoute>
-                <Clan />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/menu"
-            element={
-              <ProtectedRoute>
-                <Menu />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="/create-post"
-            element={
-              <ProtectedRoute>
-                <CreatePost />
-              </ProtectedRoute>
-            }
-          />
+          >
+            <Route path="news-feed" element={<NewsFeed />} />
+            <Route path="reels" element={<Reels />} />
+            <Route path="notifications" element={<Notifications />} />
+            <Route path="messages" element={<Messages />} />
+            <Route path="messages/:chatId?" element={<Messages />} />
+            <Route path="clan" element={<Clan />} />
+            <Route path="menu" element={<Menu />} />
+            <Route path="create-post" element={<CreatePost />} />
+          </Route>
 
-          {/* Fallback Route - unchanged */}
+          {/* Fallback */}
           <Route path="*" element={<Navigate to="/news-feed" replace />} />
         </Routes>
       </div>

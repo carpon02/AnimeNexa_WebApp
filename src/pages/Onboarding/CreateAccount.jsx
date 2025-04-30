@@ -102,7 +102,7 @@ const CreateAccount = () => {
                   <div className="pt-4">
                     <button
                       type="submit"
-                      className="w-full flex justify-center py-4 borderpy-2  transition-all duration-300 text-base border-transparent rounded-md shadow-sm  font-medium text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+                      className="w-full flex justify-center py-4 border   transition-all duration-300 text-base border-transparent rounded-md shadow-sm  font-medium text-white bg-purple-600 hover:bg-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
                       onClick={handleSubmit}
                     >
                       Create Account

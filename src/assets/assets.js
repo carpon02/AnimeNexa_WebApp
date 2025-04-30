@@ -77,6 +77,44 @@ export const assets = {
 }
 
 
+export const reelsvideos = [
+  {
+    url: 'https://pin.it/6RnuzGjPV',
+    user: 'Dante',
+    description: "Support your favorite creators. Let's build the future of anime together.",
+    avatar: nft6,
+    likes: '1,202',
+    saves:200,
+    comments: '192',
+    shares: '192',
+    following: true
+  },
+  {
+    url: 'https://in.pinterest.com/pin/641974121920952351/',
+    user: 'Naruto',
+    description: "Believe it! Never give up on your dreams.",
+    avatar: nft7,
+    likes: '2,543',
+    saves:250,
+    comments: '421',
+    shares: '315',  
+    following: true
+  },
+  {
+    url: 'https://in.pinterest.com/pin/101753272825082686/',
+    user: 'Sasuke',
+    description: "Revenge makes you blind.",
+    avatar: nft8,
+    likes: '1,876',
+    saves:400,
+    comments: '298',
+    shares: '156',
+    following: false
+  },
+];
+
+
+
 export const stories = [
   { id: 1, username: "User1", avatar: nft4},
   { id: 2, username: "User2", avatar: nft9 },
