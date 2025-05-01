@@ -8,6 +8,7 @@ import { FaVideo } from "react-icons/fa6";
 import { assets } from '../assets/assets';
 import { PlusIcon } from '@heroicons/react/solid';
 import { FiMoreVertical, FiSearch, FiPaperclip, FiMic, FiSend } from 'react-icons/fi';
+import KebabMenu from '../Components/KebabMenu';
 
 // Dummy data
 const chats = [
@@ -89,8 +90,8 @@ const Messages = () => {
           <div className="p-4 border-b flex items-center justify-between">
             <h1 className="text-lg font-bold">Messages</h1>
             <div className="flex gap-4 items-center">
-              <CiSearch className="w-5 h-5 text-black" />
-              <VscKebabVertical className="h-5 text-black" />
+              <CiSearch className="w-5 h-5 text-black cursor-pointer"  size={20}/>
+              <KebabMenu /> 
             </div>
           </div>
 

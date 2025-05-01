@@ -34,6 +34,17 @@ import comment from './comment.png'
 import like from './like.png'
 import unlike from './unlike.png'
 import save from './save.png'
+import unfriend from './Unfriend.png'
+import account from './account.png'
+import about from './about.png'
+import notification from './notification.png'
+import content from './contents.png'
+import privacy from './privacy.png'
+import rewards from './rewards.png'
+import community from './community.png'
+import display from './display.png'
+import help from './help.png'
+
 
 
 
@@ -53,6 +64,7 @@ export const assets = {
     nft11,
     nft13,
     solana,
+    unfriend,
     onboardingImage,
     ellipse1,
     ellipse2,
@@ -73,7 +85,17 @@ export const assets = {
     share,
     like,
     unlike,
-    Gift
+    Gift,
+    account,
+    about,
+    notification,
+    content,
+    privacy,
+    rewards,
+    community,
+    display,
+    help,
+
 }
 
 
