@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 export default function KebabMenu() {
   const [open, setOpen] = useState(false);
   const menuRef = useRef();
-  const navigate = useNavigate(); // Assuming you're using react-router-dom for navigation
+  const navigate = useNavigate(); 
 
   useEffect(() => {
     const handleClickOutside = (event) => {
