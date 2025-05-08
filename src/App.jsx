@@ -31,7 +31,8 @@ import Display from "./Components/Display";
 import Help from "./Components/Help";
 import ProtectedRoute from "./Components/ProtectedRoute";
 import ProtectedLayout from "./Components/ProtectedLayout"; // << Import this!
-import Profile from "./pages/Profile";
+import ProfileView from "./pages/ProfileView";
+import EditProfileView from "./Components/EditProfileView";
 
 const App = () => {
   return (
@@ -89,7 +90,8 @@ const App = () => {
             <Route path="messages/settings/help" element={<Help />} />
             <Route path="messages/settings/about" element={<About />} />
             <Route path="clan" element={<Clan />} />
-            <Route path="menu" element={<Profile />} />
+            <Route path="profile-view" element={<ProfileView />} />
+            <Route path="edit-profile" element={<EditProfileView />} />
             <Route path="create-post" element={<CreatePost />} />
           </Route>
 

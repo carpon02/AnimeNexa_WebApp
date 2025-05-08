@@ -44,6 +44,7 @@ import rewards from './rewards.png'
 import community from './community.png'
 import display from './display.png'
 import help from './help.png'
+import tag from './tag.png'
 
 
 
@@ -64,6 +65,7 @@ export const assets = {
     nft11,
     nft13,
     solana,
+    tag,
     unfriend,
     onboardingImage,
     ellipse1,
