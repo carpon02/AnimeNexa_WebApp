@@ -136,7 +136,7 @@ const EditProfileView = () => {
         </div>
         <button
           onClick={() => navigate('/profile-view')}
-          className="w-full bg-purple-600 text-white py-3 rounded-full hover:bg-purple-700"
+          className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700"
         >
           Done
         </button>

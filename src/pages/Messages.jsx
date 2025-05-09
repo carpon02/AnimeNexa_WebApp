@@ -40,7 +40,7 @@ const Messages = () => {
       const foundChat = chats.find(chat => chat.id === parseInt(chatId)); // Find chat by chatId
       setSelectedChat(foundChat); // Set the selected chat based on chatId
     } else {
-      setSelectedChat(null); // If no chatId, show chat list
+      setSelectedChat(null); 
     }
   }, [chatId]); // Re-run when chatId changes
 
